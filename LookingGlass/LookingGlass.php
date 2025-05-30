@@ -46,7 +46,7 @@ class LookingGlass
     public function mtr($host)
     {
         if ($host = $this->validate($host)) {
-            return $this->procExecute('mtr -4 --report --report-wide', $host);
+            return $this->procExecute('mtr -4 --mpls --show-ips --aslookup --report --report-wide', $host);
         }
         return false;
     }
@@ -64,7 +64,7 @@ class LookingGlass
     public function mtr6($host)
     {
         if ($host = $this->validate($host, 6)) {
-            return $this->procExecute('mtr -6 --report --report-wide', $host);
+            return $this->procExecute('mtr -6 --mpls --show-ips --aslookup --report --report-wide', $host);
         }
         return false;
     }
