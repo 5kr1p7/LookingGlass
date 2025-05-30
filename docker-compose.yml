@@ -1,0 +1,7 @@
+services:
+  lookingglass:
+    build: .
+    ports:
+      - 8091:80
+    volumes:
+      - .:/var/www/html
